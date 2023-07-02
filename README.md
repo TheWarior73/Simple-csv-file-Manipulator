@@ -6,6 +6,8 @@
 As the [program](/main/core.py) run, it will prompt for some elements such as the name of the table to modify and the place to look at etc...   
 It will then create or modify the database as needed
 
+A more in depth guide will be given upon release. `For now i am working on making this bad boy functional.`
+
 ---
 
 # How is the project going ?
