@@ -21,14 +21,22 @@
 
 # Imports
 import prompt
-
+import maths_stuff
 
 # Code
 
-def core() :
+def app() :
+    """This function takes all the bits and bops around the files to put them together and show a somewhat understandable thing
+    Paramenets : - None (N/A)
+    Output : - exit code [debbuging and informational] (str)
+    """
+    # Vars
+
+    # ===
+
 
 
     pass
 
-
-core()
+## Auto execution of the program when the script is launched
+app()

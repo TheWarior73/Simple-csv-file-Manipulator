@@ -41,3 +41,4 @@ def get_main_entry() :
     get_entry = input('What is your main entry ? ')
     ## Need to add a safe check to determine if the entry given corespond to one in the possibilities (if not it will ask the user if they whant to create a new entry or if this was a typo)
     return str(get_entry)
+
