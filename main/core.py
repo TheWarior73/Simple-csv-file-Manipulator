@@ -2,6 +2,7 @@
 # Hi ! This script is here to get all the mess together and create a somewhat working software
 # ===( How to use )===
 # Execute the file and get going !
+# you will be prompted to choose between 2 modes, one will run the program in the console, the other one in a graphic interface.
 # ===( ••• )===
 
 ## ===( CAUTION )===
@@ -19,7 +20,7 @@
 # Output : - what is given in output [Type]
 # """ 
 
-# Imports
+# = = = [Imports] = = =
 import prompt
 import maths_stuff
 
