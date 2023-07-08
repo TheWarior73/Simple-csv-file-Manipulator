@@ -1,8 +1,9 @@
 ## Getting started
 # Hi ! This script is here to do all the *complicated* maths stuff for the scripts.
-# ===( How to use )===
+
+# * * * ( How to use ) * * *
 # You shouldn't even be there...
-# ===( ••• )===
+# * * * ( ••• ) * * *
 
 ## Docstrings
 # """Quick description of what the def does 
@@ -14,13 +15,12 @@
 # = = = [Imports] = = =
 
 
-# Code  
+# = = = [Code] = = =
 
-def get_possibilities(file: str,start_main: str = '',lvl=1) :
+def get_possibilities(file: str,start_main: str = '') :
     """This function retrieves the different possibilities for a given level of informations.
     Parameter : - [file] the file where the function will look for informations.
                 - [start_main] (int) the level where you start (eg: want to see stuff in main1;sub1, useless to see stuff in main2;sub1 )
-                - [lvl] level of information to look at (int) default at 1.
     Output : A list formed of tuples (list)
     """
     ## opening the file in read mode

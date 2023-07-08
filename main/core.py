@@ -1,16 +1,17 @@
 ## Getting started
 # Hi ! This script is here to get all the mess together and create a somewhat working software
-# ===( How to use )===
+
+# * * * ( How to use ) * * *
 # Execute the file and get going !
 # you will be prompted to choose between 2 modes, one will run the program in the console, the other one in a graphic interface.
-# ===( ••• )===
+# * * * ( ••• ) * * * 
 
-## ===( CAUTION )===
+## = = = ( CAUTION ) = = =
 #
 # This file contains auto executing code !
 # DO NOT EXECUTE IT if unsure about the code present in the file
 #
-# ===( /!\ /!\ )===
+# = = = ( /!\ /!\ ) = = =
 
 
 ## Docstrings
@@ -24,20 +25,42 @@
 import prompt
 import maths_stuff
 
-# Code
+# = = = [Code] = = =
 
-def app() :
-    """This function takes all the bits and bops around the files to put them together and show a somewhat understandable thing
+## The actual stuff
+def app_console() :
+    """This function takes all the bits and bobs around the files to put them together and show a somewhat understandable thing
     Paramenets : - None (N/A)
-    Output : - exit code [debbuging and informational] (str)
+    Output : - exit code [debbuging and informational] (str or int)
     """
     # Vars
+    exitcode = ''
 
     # ===
 
 
+    return exitcode
 
-    pass
 
-## Auto execution of the program when the script is launched
-app()
+def app_Ui_edition() :
+    """ This function does the same as app_console() expect it will not run in the console but in a dedicated window.
+    Parameters : - None (N/A)
+    Output : exit code [debbug & informations] (str or int)
+    """
+    # Vars
+    exitcode = ''
+
+    # ===
+
+
+    return exitcode
+
+
+## Auto executing code when executing the file
+app_version = input('Console or Windowed version ? \nType C or W for short')
+if app_version == 'C' or app_version == 'c' :
+    app_console()
+elif app_version == 'W' or app_version == 'w' :
+    app_Ui_edition()
+
+# = = = [END OF FILE] = = =
