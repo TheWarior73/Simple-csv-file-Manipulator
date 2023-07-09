@@ -35,9 +35,16 @@ def app_console() :
     """
     # Vars
     exitcode = ''
+    file = ''
 
     # ===
-
+    print('Hi ! This is the console Version of this csv file manipulator. \nPlease start by selecting your file \nRemember, it should be in the same folder as this script.\n')
+    file = prompt.get_file()
+    print("Ok let's see what we have in there ! \n")
+    main_entry = prompt.get_entry(file)
+    if main_entry == 'retry' : # retry in case of fail to obtain the entry.
+        print('Well, try again ! What entry do you want to acess ?')
+        main_entry = prompt.get_entry(file)
 
     return exitcode
 
