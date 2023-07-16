@@ -13,13 +13,25 @@
 #
 # = = = ( /!\ /!\ ) = = =
 
-
 ## Docstrings
 # """Quick description of what the def does 
 # Parameters : - param (1)
 #              - param (2)
-# Output : - what is given in output [Type]
+# Output : - what is given in output [Type]*
+#
+# - * : optional
 # """ 
+
+# = = = [ Exit codes ] = = =
+# [1] | Not yet implemented
+# As said here, not much to add expect that i'm working on it, or at least i should (i don't mind being reminded of it tho)
+#
+# [2] | 
+#
+#
+# [3] |
+#
+#
 
 # = = = [Imports] = = =
 import prompt
@@ -34,22 +46,28 @@ def app_console() :
     Output : - exit code [debbuging and informational] (str or int)
     """
     # Vars
-    exitcode = ''
+    exitcode = 'N/A'
     file = ''
 
     # ===
     print('Hi ! This is the console Version of this csv file manipulator. \nPlease start by selecting your file \nRemember, it should be in the same folder as this script.\n')
-    file = prompt.get_file()
+    file = prompt.get_file() # obtaining the file.
     print("Ok let's see what we have in there ! \n")
-    main_entry = prompt.get_entry(file)
+    main_entry = prompt.get_entry(file) # getting the main entry
     if main_entry == 'retry' : # retry in case of fail to obtain the entry.
         print('Well, try again ! What entry do you want to acess ?')
-        main_entry = prompt.get_entry(file)
+        while main_entry == 'retry' :
+            main_entry = prompt.get_entry(file)
+    if main_entry[1] == True : # attemping to create a new main entry.
+        exitcode = '[1] | Check the [ Exit codes ] section for more information' # TEMPORARY while the crate a new entry block is under developement.
 
+    # exitcode if return doesn't show up
+    print('If you see the exitcode twice,\nit is likelly due to some code at line 66 in core.py (line can change)\n')
+    print('exitcode :\n' + exitcode)
     return exitcode
 
 
-def app_Ui_edition() :
+def app_Ui() :
     """ This function does the same as app_console() expect it will not run in the console but in a dedicated window.
     Parameters : - None (N/A)
     Output : exit code [debbug & informations] (str or int)
@@ -68,6 +86,6 @@ app_version = input('Console or Windowed version ? \nType C or W for short')
 if app_version == 'C' or app_version == 'c' :
     app_console()
 elif app_version == 'W' or app_version == 'w' :
-    app_Ui_edition()
+    app_Ui()
 
 # = = = [END OF FILE] = = =

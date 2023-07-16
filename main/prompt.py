@@ -24,7 +24,7 @@ def get_file() :
     Parameters : - None (NoneType)
     Output : - FileName (str)"""
     print('Suported filetype can only be csv for some reasons.')
-    filename = input('Filename // must be inside the script folder // ')
+    filename = input('Filename // must be inside the script folder // without the extention name (.csv)')
     filetype = '.csv'
     return str(filename+filetype)
 
@@ -65,10 +65,11 @@ def get_entry(file_csv:str,lvl=0) :
     get_entry = input('What is your main entry ? ')
     # Safecheck for spelling errors & creation of new entry otherwise.
     if get_entry not in temp_showing_list : # if the entry given before does not apear in the list, do the following bellow :
-        print('\n- You asked for a name not registered, check your spelling or maybe \nwould you like to create a new main entry using this name ? (' + get_entry + ')')
+        print('\n- You asked for a name not registered, check your spelling or maybe \nwould you like to create a new main entry using this name ? (' + get_entry + ')\n')
         create_new_str = input('Yes/No') # typing anything else than Yes | yes | y | Y will just make the user retry.
         if create_new_str == 'Yes' or create_new_str == 'yes' or create_new_str == 'y' or create_new_str == 'Y':
             create_new = True
+            print('Trying to create a new entry using the name : ' + get_entry + '\n')
         else :
             return 'retry' # will let the function that uses it know that the program could not resolve a name and therefore it should retry asking the user.
     return str(get_entry) , create_new
