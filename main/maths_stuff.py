@@ -71,3 +71,14 @@ def get_possibilities(file: str,start_main: str = '') :
     if str(data[-1]) == '{}' :
         data.remove(data[-1])
     return data
+
+def create_new_entry(file: str,) :
+    """This function is called when a new entry is required, it will create the entry depending on the level and the position in the tree
+    Parameters : - [file] the filename (str)
+    
+    Output : N/A
+    """
+
+    return
+
+# = = = [END OF FILE] = = =

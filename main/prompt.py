@@ -74,3 +74,5 @@ def get_entry(file_csv:str,lvl=0) :
             return 'retry' # will let the function that uses it know that the program could not resolve a name and therefore it should retry asking the user.
     return str(get_entry) , create_new
 
+
+# = = = [END OF FILE] = = =

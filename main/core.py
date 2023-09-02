@@ -23,7 +23,7 @@
 # """ 
 
 # = = = [ Exit codes ] = = =
-# [1] | Not yet implemented
+# [1] | 'Not yet implemented'
 # As said here, not much to add expect that i'm working on it, or at least i should (i don't mind being reminded of it tho)
 #
 # [2] | 
@@ -46,7 +46,7 @@ def app_console() :
     Output : - exit code [debbuging and informational] (str or int)
     """
     # Vars
-    exitcode = 'N/A'
+    exitcode = ''
     file = ''
 
     # ===
@@ -62,8 +62,7 @@ def app_console() :
         exitcode = '[1] | Check the [ Exit codes ] section for more information' # TEMPORARY while the crate a new entry block is under developement.
 
     # exitcode if return doesn't show up
-    print('If you see the exitcode twice,\nit is likelly due to some code at line 66 in core.py (line can change)\n')
-    print('exitcode :\n' + exitcode)
+    print('exitcode :\n' )
     return exitcode
 
 
