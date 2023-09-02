@@ -1,10 +1,9 @@
 # Simple Database Manipulator
- >This is a test project for a database manipulator that is destined to private use.
+ >This is a test project for a .csv file manipulator
 
 ## How will it work ?
 
-As the [program](/main/core.py) run, it will prompt for some elements such as the name of the table to modify and the place to look at etc...   
-It will then create or modify the database as needed
+Run the [program](/main/core.py), Choose your version (Only console is actively being developed for now), follow the instructions given. **Still WIP**
 
 A more in depth guide will be given upon release. `For now i am working on making this bad boy functional.`
 
@@ -14,20 +13,26 @@ A more in depth guide will be given upon release. `For now i am working on makin
 
 ## What has been done
 
-- [Readme.md](/README.md)
+- [Readme.md](/README.md) | Updated
 
-## What is being worked on 
+## What Files i am currently working on
 
-- [**Prompts to user**](/main/prompt.py)
-- [**all the logic behind the manipulation**](/main/maths_stuff.py)
+- [**Prompts to user**](/main/prompt.py) | File
+- [**all the logic behind the manipulation**](/main/maths_stuff.py) | File
+- [**The main file to run**](/main/core.py) | File
 
-## What is yet to do
+## Not started
 
-- User interface | UI
-- database manipulation
-    - linking between prompt and database
-- Debugging ( ^^' )   
+- Windowed version of the script
+- Final debug before release ( ^^' )   
 
+---
+
+# Before submiting an issue. . .
+
+Take a look at [the known issues](/KnownIssues.md)   
+If your issue is still something i am unaware off, please proceed !
+> give as much informations as possible please :p
 
 # time spent on the project
 
