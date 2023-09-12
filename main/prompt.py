@@ -1,5 +1,5 @@
 ## Getting started
-# Hi ! This script is here to prompt the user about differents elements about their database, it will let them edit it as freely as i possibly can make it be.
+# Hi ! This script is here to prompt the user about different elements about their database, it will let them edit it as freely as I possibly can make it be.
 
 # * * * ( How to use ) * * *
 # You shouldn't even be there...
@@ -20,15 +20,15 @@ import time
 # = = = [Code] = = =
 
 def get_file() :
-    """Prompt the user to chose a file wich is suposed to be a database following the csv format. (entry 1,entry 2,entry 3, ... , entry n)
+    """Prompt the user to choose a file which is supposed to be a database following the csv format. (entry 1,entry 2,entry 3, ... , entry n)
     Parameters : - None (NoneType)
     Output : - FileName (str)"""
-    print('Suported filetype can only be csv for some reasons.')
-    filename = input('Filename // must be inside the script folder // without the extention name (.csv)')
+    print('Supported filetype can only be csv for some reasons.')
+    filename = input('Filename // must be inside the script folder // without the extension name (.csv)')
     filetype = '.csv'
     return str(filename+filetype)
 
-# The database is an arborescence (meaning : entry 1 == main, entry 2 == submain etc...)
+# The database is a tree (meaning : entry 1 == main, entry 2 == sub main etc...)
 
 def get_entry(file_csv:str,lvl=0) :
     """Prompt the user to choose the main entry for their research/modification as well as showing them the possibilities
@@ -47,7 +47,7 @@ def get_entry(file_csv:str,lvl=0) :
     content = [] # contains all the file in list form
     for line in file : # getting every line in the file
         content.append(line.strip().split(','))
-    file.close
+    file.close()
     indexes = (content[0]) # gets the element on the first line to correctly label everything
     lvl_content = indexes[lvl] # gets the str of the lvl to search the list.
     ## = = = {levels} = = =
@@ -62,17 +62,17 @@ def get_entry(file_csv:str,lvl=0) :
             print(possibility_list[i][lvl_content])
     time.sleep(1)
     # Getting the desired entry
-    get_entry = input('What is your main entry ? ')
-    # Safecheck for spelling errors & creation of new entry otherwise.
-    if get_entry not in temp_showing_list : # if the entry given before does not apear in the list, do the following bellow :
-        print('\n- You asked for a name not registered, check your spelling or maybe \nwould you like to create a new main entry using this name ? (' + get_entry + ')\n')
+    get_main_entry = input('What is your main entry ? ')
+    # Safe-check for spelling errors & creation of new entry otherwise.
+    if get_main_entry not in temp_showing_list : # if the entry given before does not appear in the list, do the following bellow :
+        print('\n- You asked for a name not registered, check your spelling or maybe \nwould you like to create a new main entry using this name ? (' + get_main_entry + ')\n')
         create_new_str = input('Yes/No') # typing anything else than Yes | yes | y | Y will just make the user retry.
         if create_new_str == 'Yes' or create_new_str == 'yes' or create_new_str == 'y' or create_new_str == 'Y':
             create_new = True
-            print('Trying to create a new entry using the name : ' + get_entry + '\n')
+            print('Trying to create a new entry using the name : ' + get_main_entry + '\n')
         else :
-            return 'retry' # will let the function that uses it know that the program could not resolve a name and therefore it should retry asking the user.
-    return str(get_entry) , create_new
+            return 'retry' # will let the function that uses it know that the program could not resolve a name, and therefore it should retry asking the user.
+    return str(get_main_entry) , create_new
 
 
 # = = = [END OF FILE] = = =

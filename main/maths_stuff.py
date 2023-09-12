@@ -18,8 +18,8 @@
 # = = = [Code] = = =
 
 def get_possibilities(file: str,start_main: str = '') :
-    """This function retrieves the different possibilities for a given level of informations.
-    Parameter : - [file] the file where the function will look for informations.
+    """This function retrieves the different possibilities for a given level of information.
+    Parameter : - [file] the file where the function will look for information.
                 - [start_main] (int) the level where you start (eg: want to see stuff in main1;sub1, useless to see stuff in main2;sub1 )
     Output : A list formed of tuples (list)
     """
@@ -28,7 +28,7 @@ def get_possibilities(file: str,start_main: str = '') :
     content = [] # contains all the file in list form
     for line in file : # getting every line in the file
         content.append(line.strip().split(','))
-    file.close
+    file.close()
 
     ## ===(creating the list )===
     # vars for creating a tuple.
@@ -41,7 +41,7 @@ def get_possibilities(file: str,start_main: str = '') :
             for j in range(len(content[0])) : # we get every element per line
                 tempo[indexes[j]] = content[i+1][j] # creating the tuple w/ the indexes values
             
-            # checking for empty tuples (exept for the last one, done at the end)
+            # checking for empty tuples (except for the last one, done at the end)
             for check in range(len(data)) :
                 if str(data[check]) == '{}' :
                     data.remove(data[check])
@@ -57,7 +57,7 @@ def get_possibilities(file: str,start_main: str = '') :
                 if content[i+1][0] == start_main :
                     tempo[indexes[j]] = content[i+1][j] # creating the tuple w/ the indexes values
 
-            # checking for empty tuples (exept for the last one, done at the end)
+            # checking for empty tuples (except for the last one, done at the end)
             for check in range(len(data)) :
                 if str(data[check]) == '{}' :
                     data.remove(data[check])
